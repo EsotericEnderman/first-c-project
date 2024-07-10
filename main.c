@@ -47,6 +47,9 @@ int main()
     case '/':
         result = divide(a, b);
         break;
+    default:
+        printf("Unknown operation: %s", operation);
+        return 1;
     }
 
     printf("%f %c %f = %f", a, operation, b, result);
