@@ -2,7 +2,19 @@
 #include <stdlib.h>
 
 float add(float x, float y) {
-    return (x + y);
+    return x + y;
+}
+
+float subtract(float x, float y) {
+    return x - y;
+}
+
+float multiply(float x, float y) {
+    return x * y;
+}
+
+float divide(float x, float y) {
+    return x / y;
 }
 
 int main()
@@ -24,16 +36,16 @@ int main()
     float result;
     switch (operation) {
     case '+':
-        result = a + b;
+        result = add(a, b);
         break;
     case '-':
-        result = a - b;
+        result = subtract(a, b);
         break;
     case '*':
-        result = a * b;
+        result = multiply(a, b);
         break;
     case '/':
-        result = a / b;
+        result = divide(a, b);
         break;
     }
 
