@@ -11,19 +11,23 @@
 #define MULTIPLICATION_OPERATOR_CHARACTER '*'
 #define DIVISION_OPERATOR_CHARACTER '/'
 
-float add(float x, float y) {
+float add(float x, float y)
+{
     return x ADDITION_OPERATOR y;
 }
 
-float subtract(float x, float y) {
+float subtract(float x, float y)
+{
     return x SUBTRACTION_OPERATOR y;
 }
 
-float multiply(float x, float y) {
+float multiply(float x, float y)
+{
     return x MULTIPLICATION_OPERATOR y;
 }
 
-float divide(float x, float y) {
+float divide(float x, float y)
+{
     return x DIVISION_OPERATOR y;
 }
 
@@ -34,7 +38,8 @@ int main()
     printf("Enter operation: ");
     scanf(" %c", &operation);
 
-    if (operation != ADDITION_OPERATOR_CHARACTER && operation != SUBTRACTION_OPERATOR_CHARACTER && operation != MULTIPLICATION_OPERATOR_CHARACTER && operation != DIVISION_OPERATOR_CHARACTER) {
+    if (operation != ADDITION_OPERATOR_CHARACTER && operation != SUBTRACTION_OPERATOR_CHARACTER && operation != MULTIPLICATION_OPERATOR_CHARACTER && operation != DIVISION_OPERATOR_CHARACTER)
+    {
         printf("Unknown operation: %c\n", operation);
         return 1;
     }
@@ -49,7 +54,8 @@ int main()
     scanf("%f", &b);
 
     float result;
-    switch (operation) {
+    switch (operation)
+    {
     case ADDITION_OPERATOR_CHARACTER:
         result = add(a, b);
         break;
