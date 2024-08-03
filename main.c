@@ -22,7 +22,12 @@ int main()
     char operation;
 
     printf("Enter operation: ");
-    scanf("%s", &operation);
+    scanf(" %c", &operation);
+
+    if (operation != '+' && operation != '-' && operation != '*' && operation != '/') {
+        printf("Unknown operation: %c\n", operation);
+        return 1;
+    }
 
     float a;
     float b;
@@ -47,9 +52,6 @@ int main()
     case '/':
         result = divide(a, b);
         break;
-    default:
-        printf("Unknown operation: %s", operation);
-        return 1;
     }
 
     printf("%f %c %f = %f", a, operation, b, result);
